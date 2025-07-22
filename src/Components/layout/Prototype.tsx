@@ -36,7 +36,7 @@ export default function Prototype() {
 
         <div className="flex flex-col gap-8 md:flex-row">
           {/* Main Carousel */}
-          <div className="relative min-h-[24rem] flex-1 overflow-hidden rounded-lg bg-white shadow-md">
+          <div className="relative min-h-[30rem] flex-1 overflow-hidden rounded-lg bg-white shadow-md">
             <div
               className="flex transition-transform duration-500"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -44,7 +44,7 @@ export default function Prototype() {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className="flex h-96 w-full flex-shrink-0 items-center justify-center bg-gray-100 dark:bg-neutral-900"
+                  className="flex h-120 w-full flex-shrink-0 items-center justify-center bg-gray-100 dark:bg-neutral-900"
                 >
                   <span className="text-4xl text-gray-800 dark:text-white">
                     {slide}
@@ -69,12 +69,12 @@ export default function Prototype() {
           </div>
 
           {/* Pagination (Thumbnails) */}
-          <div className="flex max-h-96 gap-2 overflow-x-auto md:flex-col md:overflow-y-auto">
+          <div className="no-scrollbar flex max-h-120 gap-2 overflow-x-auto md:flex-col md:overflow-y-auto">
             {slides.map((slide, index) => (
               <div
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`flex h-20 w-20 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-md border text-xs md:h-32 md:w-32 ${
+                className={`flex h-20 w-20 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-md border text-xs md:h-28 md:w-32 ${
                   currentIndex === index
                     ? "border-blue-400"
                     : "border-gray-200 dark:border-neutral-700"

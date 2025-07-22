@@ -6,8 +6,7 @@ import {
   ChevronRightIcon,
 } from "lucide-react";
 
-
-// CRUD 
+// CRUD
 export default function Slider() {
   const slides = [
     {
@@ -40,6 +39,7 @@ export default function Slider() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
+
   // Auto-advance slides
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,8 +50,8 @@ export default function Slider() {
 
   return (
     <>
-      <section className="relative w-full bg-[#FCF5E6] py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="relative right-1/2 left-1/2 -mr-[50vw] -ml-[50vw] w-screen bg-[#FCF5E6]">
+        <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="flex flex-col items-center md:flex-row">
             <div className="z-10 mb-10 md:mb-0 md:w-1/2">
               <h1 className="mb-4 text-4xl leading-tight font-bold text-[#386742] md:text-5xl lg:text-6xl">
@@ -70,8 +70,8 @@ export default function Slider() {
                 </Button>
               </div>
             </div>
-            <div className="relative md:w-1/2">
-              <div className="relative h-[300px] overflow-hidden rounded-lg shadow-xl md:h-[400px]">
+            <div className="relative w-full md:w-1/2">
+              <div className="relative h-[300px] min-h-[300px] overflow-hidden rounded-lg shadow-xl md:h-[400px]">
                 {slides.map((slide, index) => (
                   <div
                     key={index}

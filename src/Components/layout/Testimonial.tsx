@@ -41,13 +41,13 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="no-scrollbar flex gap-4 overflow-x-auto md:grid md:grid-cols-3 md:gap-8">
+        <div className="no-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:gap-8 md:overflow-x-visible">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="h-[400px] min-w-[280px] shrink-0 rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg md:h-auto md:min-w-0"
+              className="flex min-w-[88vw] snap-center flex-col rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg md:min-w-0 md:snap-align-none"
             >
-              <div className="mb-4 flex items-center">
+              <div className="mb-4 flex">
                 {[...Array(5)].map((_, i) => (
                   <StarIcon
                     key={i}
@@ -56,7 +56,7 @@ export default function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="truncate-multiline mb-6 text-gray-700 italic">
+              <p className="mb-6 flex-1 text-gray-700 italic">
                 "{testimonial.quote}"
               </p>
 

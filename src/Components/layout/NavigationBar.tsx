@@ -18,6 +18,7 @@ import Register from "../../Pages/Authentication/Register";
 export default function NavigationBar() {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const isLoggedIn = false;
 
   return (
     <>
@@ -67,18 +68,21 @@ export default function NavigationBar() {
           <NavbarLink href="#">Product</NavbarLink>
           <NavbarLink href="#">Team</NavbarLink>
 
-          <NavbarLink
+          {/* <NavbarLink
             onClick={() => setShowRegisterModal(true)}
             className="cursor-pointer"
           >
             Register
-          </NavbarLink>
-          <NavbarLink
-            onClick={() => setShowLoginModal(true)}
-            className="cursor-pointer"
-          >
-            Login
-          </NavbarLink>
+          </NavbarLink> */}
+          
+          {!isLoggedIn && (
+            <NavbarLink
+              onClick={() => setShowLoginModal(true)}
+              className="cursor-pointer"
+            >
+              Login
+            </NavbarLink>
+          )}
         </NavbarCollapse>
       </Navbar>
 

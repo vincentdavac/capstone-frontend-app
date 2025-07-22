@@ -8,7 +8,7 @@ export default function Layout() {
         <NavigationBar />
       </header>
 
-      <main className="mt-4 px-4">
+      <main className="">
         <Outlet />
       </main>
     </>
