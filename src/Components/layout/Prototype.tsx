@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+// import ModelViewer from "./components/ModelViewer"; // Adjust path if needed
+import ModelViewer from "../ModelViewer"; // Update this path if ModelViewer.tsx is in src/Components/
 
 const slides = [
-  "First slide",
+  "3D Model", // first slide is replaced by ModelViewer
   "Second slide",
   "Third slide",
   "Fourth slide",
@@ -22,19 +24,22 @@ export default function Prototype() {
   };
 
   return (
-    <section className="w-full bg-white py-16">
+    <section className="w-full bg-[#023E8A] py-16">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-[#386742] md:text-4xl">
-            Prototype Carousel
+          <h2 className="mb-4 text-3xl font-bold text-[#FFFFFF] md:text-7xl">
+            THE COASTELLA PROTOTYPE
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-gray-700">
-            This demonstrates consistent spacing inspired by your About section
-            layout.
+          <p className="mx-auto max-w-7xl text-2xl text-[#FFFFFF]">
+            The COASTELLA prototype showcases a solar-powered buoy model
+            equipped with sensors for monitoring water levels, wind speed, wave
+            activity, and water quality. It also demonstrates the GPS tracking,
+            siren alerts, and real-time notification system, all integrated into
+            a web-based dashboard for accessible and timely coastal monitoring.
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 md:flex-row">
+        <div className="flex flex-col gap-5 md:flex-row">
           {/* Main Carousel */}
           <div className="relative min-h-[30rem] flex-1 overflow-hidden rounded-lg bg-white shadow-md">
             <div
@@ -46,9 +51,15 @@ export default function Prototype() {
                   key={index}
                   className="flex h-120 w-full flex-shrink-0 items-center justify-center bg-gray-100 dark:bg-neutral-900"
                 >
-                  <span className="text-4xl text-gray-800 dark:text-white">
-                    {slide}
-                  </span>
+                  {index === 0 ? (
+                    <div className="h-full w-full">
+                      <ModelViewer />
+                    </div>
+                  ) : (
+                    <span className="text-4xl text-gray-800 dark:text-white">
+                      {slide}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

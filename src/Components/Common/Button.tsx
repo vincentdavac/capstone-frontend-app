@@ -14,8 +14,9 @@ export const Button = ({
   const baseClasses =
     "py-2 px-6 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#386742]";
   const variantClasses = {
-    primary: "bg-[#386742] hover:bg-[#386742]/90 text-white",
-    outline: "border-2 border-[#386742] text-[#386742] hover:bg-[#386742]/10",
+    primary:
+      "bg-[#0077B6] hover:bg-[#FFFFFF] hover:text-[#000000] text-white border-2 border-[#FFFFFF] hover:outline hover:outline-2 hover:outline-[#0077B6]",
+    outline: "border-2 border-[#FFFFFF] text-[#FFFFFF] hover:bg-[#FFFFFF]/10",
   };
   const widthClass = fullWidth ? "w-full" : "";
   return (

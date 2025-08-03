@@ -22,15 +22,15 @@ export default function NavigationBar() {
 
   return (
     <>
-      <Navbar fluid rounded>
+      <Navbar fluid rounded style={{ backgroundColor: "#FAF3DD" }}>
         <NavbarBrand href="https://flowbite-react.com">
           {/* <img
             src="/favicon.svg"
             className="mr-3 h-6 sm:h-9"
             alt="Flowbite React Logo"
           /> */}
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Capstone Project
+          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-black">
+            COASTELLA
           </span>
         </NavbarBrand>
         <div className="flex md:order-2">
@@ -60,25 +60,46 @@ export default function NavigationBar() {
           <NavbarToggle />
         </div>
         <NavbarCollapse>
-          <NavbarLink href="#" active>
+          <NavbarLink
+            href="#"
+            active
+            className="text-black transition-colors duration-200 hover:text-[#023E8A] dark:text-black"
+          >
             Home
           </NavbarLink>
-          <NavbarLink href="#">About</NavbarLink>
-          <NavbarLink href="#">Prototype</NavbarLink>
-          <NavbarLink href="#">Product</NavbarLink>
-          <NavbarLink href="#">Team</NavbarLink>
-
-          {/* <NavbarLink
-            onClick={() => setShowRegisterModal(true)}
-            className="cursor-pointer"
+          <NavbarLink
+            href="#"
+            active
+            className="text-black transition-colors duration-200 hover:text-[#023E8A] dark:text-black"
           >
-            Register
-          </NavbarLink> */}
-          
+            About
+          </NavbarLink>
+          <NavbarLink
+            href="#"
+            active
+            className="text-black transition-colors duration-200 hover:text-[#023E8A] dark:text-black"
+          >
+            Prototype
+          </NavbarLink>
+          <NavbarLink
+            href="#"
+            active
+            className="text-black transition-colors duration-200 hover:text-[#023E8A] dark:text-black"
+          >
+            Product
+          </NavbarLink>
+          <NavbarLink
+            href="#"
+            active
+            className="text-black transition-colors duration-200 hover:text-[#023E8A] dark:text-black"
+          >
+            Team
+          </NavbarLink>
           {!isLoggedIn && (
             <NavbarLink
               onClick={() => setShowLoginModal(true)}
-              className="cursor-pointer"
+              active
+              className="cursor-pointer text-black transition-colors duration-200 hover:text-[#023E8A] dark:text-black"
             >
               Login
             </NavbarLink>
