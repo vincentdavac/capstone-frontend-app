@@ -12,11 +12,12 @@ export const Button = ({
   onClick,
 }: ButtonProps) => {
   const baseClasses =
-    "py-2 px-6 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#386742]";
+    "py-2 px-6 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-1 ";
   const variantClasses = {
     primary:
-      "bg-[#0077B6] hover:bg-[#FFFFFF] hover:text-[#000000] text-white border-2 border-[#FFFFFF] hover:outline hover:outline-2 hover:outline-[#0077B6]",
-    outline: "border-2 border-[#FFFFFF] text-[#FFFFFF] hover:bg-[#FFFFFF]/10",
+      "bg-[#39A7FF] hover:bg-[#FFFFFF] hover:text-[#39A7FF] text-white border-1 border-[#FFFFFF] hover:outline hover:outline-1 hover:outline-[#39A7FF]",
+    outline:
+      "bg-[#FFFFFF] hover:bg-[#39A7FF] text-[#39A7FF] hover:text-[#FFFFFF] outline outline-1 outline-[#39A7FF] hover:outline-[#39A7FF]",
   };
   const widthClass = fullWidth ? "w-full" : "";
   return (

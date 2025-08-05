@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Add in your global styles */
@@ -15,14 +15,14 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("/fonts/Roboto-Italic-VariableFont_wdth,wght") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("/fonts/Roboto-VariableFont_wdth,wght") format("truetype");
   font-weight: 700;
   font-style: normal;
 }

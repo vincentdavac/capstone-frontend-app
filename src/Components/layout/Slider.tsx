@@ -50,14 +50,14 @@ export default function Slider() {
 
   return (
     <>
-      <section className="relative right-1/2 left-1/2 -mr-[50vw] -ml-[50vw] w-screen bg-[#023E8A]">
+      <section className="relative right-1/2 left-1/2 -mr-[50vw] -ml-[50vw] w-screen bg-[#FFFFF]">
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="flex flex-col items-center md:flex-row">
             <div className="z-10 mb-10 md:mb-0 md:w-1/2">
-              <h1 className="mb-4 text-4xl leading-tight font-bold text-[#FFFFFF] md:text-5xl lg:text-5xl">
+              <h1 className="mb-4 text-4xl leading-tight font-bold text-[#39A7FF] md:text-5xl lg:text-5xl">
                 {slides[currentSlide].title}
               </h1>
-              <p className="mb-8 max-w-lg text-lg text-[#FFFFFF] md:text-xl">
+              <p className="mb-8 max-w-lg text-lg text-[#39A7FF] md:text-xl">
                 {slides[currentSlide].description}
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -88,14 +88,14 @@ export default function Slider() {
                 {/* Slider controls */}
                 <button
                   onClick={prevSlide}
-                  className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-white/70 p-2 text-[#0077B6] hover:bg-white"
+                  className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-white/70 p-2 text-[#39A7FF] hover:bg-white"
                   aria-label="Previous slide"
                 >
                   <ChevronLeftIcon size={24} />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-white/70 p-2 text-[#0077B6] hover:bg-white"
+                  className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-white/70 p-2 text-[#39A7FF] hover:bg-white"
                   aria-label="Next slide"
                 >
                   <ChevronRightIcon size={24} />
@@ -106,7 +106,7 @@ export default function Slider() {
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`h-3 w-3 rounded-full ${index === currentSlide ? "bg-[#0077B6]" : "bg-white/50"}`}
+                      className={`h-3 w-3 rounded-full ${index === currentSlide ? "bg-[#87C4FF]" : "bg-white/50"}`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
                   ))}
