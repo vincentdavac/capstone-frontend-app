@@ -54,10 +54,10 @@ export default function Slider() {
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="flex flex-col items-center md:flex-row">
             <div className="z-10 mb-10 md:mb-0 md:w-1/2">
-              <h1 className="mb-4 text-4xl leading-tight font-bold text-[#39A7FF] md:text-5xl lg:text-5xl">
+              <h1 className="mb-4 text-4xl leading-tight font-bold text-[#023E8A] md:text-5xl lg:text-5xl">
                 {slides[currentSlide].title}
               </h1>
-              <p className="mb-8 max-w-lg text-lg text-[#39A7FF] md:text-xl">
+              <p className="mb-8 max-w-lg text-lg text-[#000000] md:text-xl">
                 {slides[currentSlide].description}
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">

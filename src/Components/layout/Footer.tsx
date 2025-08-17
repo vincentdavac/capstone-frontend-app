@@ -1,122 +1,109 @@
-import {
-  FacebookIcon,
-  InstagramIcon,
-  TwitterIcon,
-  YoutubeIcon,
-  MailIcon,
-  PhoneIcon,
-  MapPinIcon,
-} from "lucide-react";
+import { FacebookIcon, InstagramIcon, TwitterIcon } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#386742] text-white">
+    <footer className="w-full bg-white text-[#023E8A]">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <h3 className="mb-4 text-xl font-bold">GreenGrow</h3>
-            <p className="mb-4">
-              Sustainable hydroponics solutions for homes and businesses. Grow
-              better with less water.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-[#FCF5E6]">
-                <FacebookIcon size={20} />
-              </a>
-              <a href="#" className="hover:text-[#FCF5E6]">
-                <InstagramIcon size={20} />
-              </a>
-              <a href="#" className="hover:text-[#FCF5E6]">
-                <TwitterIcon size={20} />
-              </a>
-              <a href="#" className="hover:text-[#FCF5E6]">
-                <YoutubeIcon size={20} />
-              </a>
+        {/* Main Content */}
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+          {/* Left Column - Brand Info */}
+          <div className="space-y-4">
+            <h3 className="text-5xl font-light">COASTELLA</h3>
+            <p className="text-lg">Stay Informed, Stay Safe, Stay Ahead</p>
+          </div>
+
+          {/* Middle Columns - Links */}
+          <div className="grid grid-cols-2 gap-10">
+            {/* Quick Links */}
+            <div>
+              <h4 className="pb-3 text-3xl font-light">QUICK LINKS</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="hover:underline">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    About COASTELLA
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Meet the Team
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Prototype
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    FAQs
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h4 className="pb-3 text-3xl font-light">RESOURCES</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="hover:underline">
+                    Project Documentation
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Research Paper
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Contact Form
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
+
+          {/* Right Column - Contact Info */}
           <div>
-            <h4 className="mb-4 text-lg font-semibold">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  How It Works
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  FAQs
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">Products</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  Home Systems
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  Commercial Solutions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  Nutrients
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  Accessories
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#FCF5E6]">
-                  Seed Starter Kits
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">Contact Us</h4>
+            <h4 className="pb-3 text-3xl font-light">CONTACT INFORMATION</h4>
             <ul className="space-y-3">
-              <li className="flex items-center">
-                <MapPinIcon size={18} className="mr-2" />
-                <span>123 Green Street, Plant City, CA 94123</span>
-              </li>
-              <li className="flex items-center">
-                <PhoneIcon size={18} className="mr-2" />
-                <span>(555) 123-4567</span>
-              </li>
-              <li className="flex items-center">
-                <MailIcon size={18} className="mr-2" />
-                <span>info@greengrow.com</span>
+              <li>Email: coastella.project@gmail.com</li>
+              <li className="flex items-center space-x-4">
+                <span>Facebook Page /</span>
+                <div className="flex space-x-2">
+                  <a href="#">
+                    <FacebookIcon size={20} />
+                  </a>
+                  <a href="#">
+                    <InstagramIcon size={20} />
+                  </a>
+                  <a href="#">
+                    <TwitterIcon size={20} />
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-white/20 pt-6 text-center text-sm">
-          <p>
-            © {new Date().getFullYear()} GreenGrow Hydroponics. All rights
-            reserved.
-          </p>
+
+        {/* Copyright Section */}
+        <div className="mt-16 border-t border-gray-200 pt-6">
+          <div className="flex flex-col items-center space-y-2 text-center">
+            <p className="font-light">
+              © 2025 COASTELLA | Coastal Operations Monitoring and Alert System
+            </p>
+          </div>
         </div>
       </div>
     </footer>

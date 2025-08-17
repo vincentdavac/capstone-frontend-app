@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
@@ -9,19 +9,20 @@ type GLTFResult = {
 
 function Model() {
   const { scene } = useGLTF("/3d.glb") as GLTFResult;
-  return <primitive object={scene} scale={0.7} position={[0, -1, 0]} />; // Adjusted y-position
+  return <primitive object={scene} scale={0.7} position={[0, -1, 0]} />;
 }
 
 export default function ModelViewer() {
   return (
     <Canvas
-      camera={{ position: [5, 5, 5], fov: 45 }}
+      camera={{ position: [5, 5, 5], fov: 37 }}
       style={{
-        background: "#0077B6", // Changed from transparent to light gray
-        height: "228%",
+        background: "transparent",
+        height: "115%",
         width: "100%",
+        marginBottom: "-4rem",
       }}
-      gl={{ antialias: true }}
+      gl={{ antialias: true, alpha: true }} // alpha:true makes background transparent
     >
       <ambientLight intensity={0.9} />
       <directionalLight position={[10, 10, 5]} intensity={1} />

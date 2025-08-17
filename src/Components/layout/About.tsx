@@ -1,86 +1,90 @@
-import { GlobeIcon, HeartHandshakeIcon } from "lucide-react";
+import React from "react";
 
 export default function About() {
   return (
-    <section className="w-full bg-[#E0F4FF] py-16">
+    <section className="w-full bg-[#0353A4] py-16">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-[#0077B6] md:text-6xl">
-            ABOUT US
+          <h2
+            className="mb-4 text-3xl font-bold text-[#FFFFFF] md:text-6xl"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            COASTELLA DEPLOYMENT MAP
           </h2>
-          <p className="mx-auto max-w-7xl text-justify text-2xl leading-relaxed text-[#585858]">
-            COASTELLA is a solar-powered, IoT-based buoy system designed to
-            monitor coastal areas in real-time. We provide accurate data on
-            water levels, wind speed, wave activity, and water quality to help
-            communities, authorities, and stakeholders stay informed and
-            prepared for coastal hazards. By combining sustainable technology
-            with early warning capabilities, we aim to protect lives, preserve
-            marine ecosystems, and support disaster preparedness for safer
-            coastal communities.
+          <p className="max-w-9xl mx-auto pt-7 text-justify text-2xl leading-relaxed text-[#FFFFFF]">
+            COASTELLA strategically deploys its solar-powered, IoT-based buoys
+            in coastal areas that are most vulnerable to environmental hazards.
+            These buoys gather accurate, real-time data on water levels, wind
+            speed, wave activity, and water quality to help communities,
+            authorities, and stakeholders make informed decisions. By combining
+            sustainable technology with early warning systems, we strengthen
+            disaster preparedness, protect lives, and contribute to the
+            preservation of our marine environment.
           </p>
         </div>
-        <div className="mb-16 flex flex-col items-center gap-8 lg:flex-row">
-          <div className="lg:w-1/2">
+        <div className="mb-16 flex flex-col items-center gap-8 pt-10 lg:flex-row">
+          <div className="pb-20 lg:w-1/2">
             <div className="overflow-hidden rounded-lg shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                 alt="Team members working on hydroponic systems"
-                className="h-auto w-full object-cover"
+                className="h-120 w-full object-cover"
               />
             </div>
           </div>
           <div className="lg:w-1/2">
-            <h3 className="mb-4 text-5xl font-semibold text-[#0077B6]">
-              Our Story
-            </h3>
             <div className="flex flex-col gap-y-8">
-              <p className="mb-4 max-w-5xl text-justify text-2xl leading-relaxed text-[#585858]">
-                COASTELLA started with a vision: to create a smart and
-                affordable way to monitor our coasts and keep communities safe.
-                Inspired by the challenges faced by coastal regions—rising sea
-                levels, unpredictable waves, and threats like red tide—we
-                designed a solar-powered buoy system that provides real-time
-                alerts and reliable data.
+              <p className="mb-4 max-w-4xl text-justify text-xl leading-relaxed text-[#FFFFFF]">
+                The COASTELLA Deployment Map shows the current locations of our
+                active buoys along vulnerable coastal areas. Each site is chosen
+                through hazard mapping and community consultations to ensure
+                that monitoring is focused on high-risk and high-priority
+                locations. By targeting these areas, we can deliver real-time
+                alerts and accurate data to support disaster preparedness and
+                coastal safety.
               </p>
-              <p className="mb-4 max-w-5xl text-justify text-2xl leading-relaxed text-[#585858]">
-                From concept to creation, our team worked to blend innovation,
-                sustainability, and practicality into a single solution.
-                COASTELLA isn’t just a project—it’s our commitment to helping
-                coastal communities prepare, respond, and thrive in the face of
-                environmental challenges.
+              <p className="mb-4 max-w-4xl text-justify text-xl leading-relaxed text-[#FFFFFF]">
+                From site selection to full deployment, our team works to
+                position each buoy where it can make the most impact. This
+                network of buoys forms a reliable early warning system, helping
+                communities stay informed, respond quickly, and protect both
+                lives and marine environments.
               </p>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="rounded-lg bg-[#FAF3DD] p-6 shadow-md">
-            <GlobeIcon size={40} className="mb-4 text-[#0077B6]" />
-            <h3 className="mb-3 text-xl font-semibold text-[#0077B6]">
-              Our Mission
+          <div className="rounded-lg bg-[#FFFFFF] p-6 shadow-md">
+            <h3 className="mb-4 text-center text-4xl font-bold text-[#023E8A]">
+              OUR MISSION
             </h3>
-            <p className="text-justify leading-relaxed text-[#0077B6]">
-              To transform how people grow and connect with their food through
-              innovative, sustainable hydroponic solutions.
+            <p className="pt-4 text-justify leading-relaxed text-[#023E8A]">
+              To provide a sustainable, solar-powered coastal monitoring and
+              alert system that delivers real-time data and early warnings,
+              empowering communities and authorities to enhance safety, disaster
+              preparedness, and marine preservation.
             </p>
           </div>
-          <div className="rounded-lg bg-[#FAF3DD] p-6 shadow-md">
-            <GlobeIcon size={40} className="mb-4 text-[#0077B6]" />
-            <h3 className="mb-3 text-xl font-semibold text-[#0077B6]">
-              Our Vision
+          <div className="rounded-lg bg-[#FFFFFF] p-6 shadow-md">
+            <h3 className="mb-4 text-center text-4xl font-bold text-[#023E8A]">
+              OUR VISION
             </h3>
-            <p className="text-justify leading-relaxed text-[#0077B6]">
-              A world where everyone has access to fresh, healthy food grown
-              sustainably with minimal environmental impact.
+            <p className="pt-4 text-justify leading-relaxed text-[#023E8A]">
+              To provide a sustainable, solar-powered coastal monitoring and
+              alert system that delivers real-time data and early warnings,
+              empowering communities and authorities to enhance safety, disaster
+              preparedness, and marine preservation.
             </p>
           </div>
-          <div className="rounded-lg bg-[#FAF3DD] p-6 shadow-md">
-            <HeartHandshakeIcon size={40} className="mb-4 text-[#0077B6]" />
-            <h3 className="mb-3 text-xl font-semibold text-[#0077B6]">
-              Our Values
+          <div className="rounded-lg bg-[#FFFFFF] p-6 shadow-md">
+            <h3 className="mb-4 text-center text-4xl font-bold text-[#023E8A]">
+              OUR VALUES
             </h3>
-            <p className="text-justify leading-relaxed text-[#0077B6]">
-              Sustainability, innovation, education, and accessibility guide
-              everything we do at GreenGrow.
+            <p className="pt-4 text-justify leading-relaxed text-[#023E8A]">
+              To provide a sustainable, solar-powered coastal monitoring and
+              alert system that delivers real-time data and early warnings,
+              empowering communities and authorities to enhance safety, disaster
+              preparedness, and marine preservation.
             </p>
           </div>
         </div>

@@ -29,15 +29,21 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="w-full bg-[#FCF5E6] py-16">
+    <section className="w-full bg-[#0353A4] py-16">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-[#386742] md:text-4xl">
-            What Our Customers Say
+          <h2
+            className="mb-4 text-3xl text-[#FFFFFF] md:text-6xl"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            VOICES FROM OUR COMMUNITY
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-gray-700">
-            Join thousands of satisfied growers who've transformed their spaces
-            with hydroponics.
+          <p
+            className="max-w-9xl text-1xl mx-auto font-light text-[#FFFFFF]"
+            style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 100 }}
+          >
+            Your feedback helps us improve, innovate, and continue building
+            solutions that make coastal communities safer and more resilient.
           </p>
         </div>
 
@@ -51,12 +57,12 @@ export default function Testimonials() {
                 {[...Array(5)].map((_, i) => (
                   <StarIcon
                     key={i}
-                    size={18}
-                    className="fill-yellow-500 text-yellow-500"
+                    size={20}
+                    className="fill-[#023E8A] text-[#FFFFFF]"
                   />
                 ))}
               </div>
-              <p className="mb-6 flex-1 text-gray-700 italic">
+              <p className="montserrat mb-6 flex-1 text-lg font-light text-[#023E8A]">
                 "{testimonial.quote}"
               </p>
 
@@ -69,10 +75,10 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#386742]">
+                  <h4 className="montserrat font-light text-[#023E8A]">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <p className="text-sm text-[#023E8A]">{testimonial.role}</p>
                 </div>
               </div>
             </div>
