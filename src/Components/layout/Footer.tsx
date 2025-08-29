@@ -8,7 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Left Column - Brand Info */}
           <div className="space-y-4">
-            <h3 className="text-5xl font-light">COASTELLA</h3>
+            <h3
+              className="text-5xl font-light"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              COASTELLA
+            </h3>
             <p className="text-lg">Stay Informed, Stay Safe, Stay Ahead</p>
           </div>
 
@@ -78,12 +83,39 @@ export default function Footer() {
           <div>
             <h4 className="pb-3 text-3xl font-light">CONTACT INFORMATION</h4>
             <ul className="space-y-3">
-              <li>Email: coastella.project@gmail.com</li>
+              <li>
+                Email:{" "}
+                <a
+                  href="mailto:coastella.project@gmail.com"
+                  className="hover:underline"
+                >
+                  coastella.project@gmail.com
+                </a>
+              </li>
               <li className="flex items-center space-x-4">
-                <span>Facebook Page /</span>
                 <div className="flex space-x-2">
-                  <a href="#">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61578909728047&mibextid=wwXIfr&rdid=1523AyOq6ApgOBmF&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F179nv48zN7%2F%3Fmibextid%3DwwXIfr#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FacebookIcon size={20} />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@coastella.2025"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {/* YouTube Icon gamit lucide-react */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M23.498 6.186a2.974 2.974 0 0 0-2.093-2.106C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.405.58A2.974 2.974 0 0 0 .502 6.186C0 8.1 0 12 0 12s0 3.9.502 5.814a2.974 2.974 0 0 0 2.093 2.106C4.495 20.5 12 20.5 12 20.5s7.505 0 9.405-.58a2.974 2.974 0 0 0 2.093-2.106C24 15.9 24 12 24 12s0-3.9-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
+                    </svg>
                   </a>
                   <a href="#">
                     <InstagramIcon size={20} />

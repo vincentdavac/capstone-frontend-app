@@ -35,23 +35,55 @@ export default function Login({
   return (
     <>
       <Modal show={show} size="md" onClose={onClose} popup>
-        <ModalHeader />
-        <ModalBody>
+        <ModalHeader className="bg-[#FFFFFF]" />
+        <ModalBody className="bg-[#FFFFFF]">
           <div className="space-y-6">
-            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-              Sign in to our platform
+            <h3
+              className="text-xl font-bold text-[#0353A4]"
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+              }}
+            >
+              Sign in to your Account
             </h3>
 
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="email">Your email</Label>
+                <Label
+                  htmlFor="email"
+                  className="text-sm font-light"
+                  style={{
+                    fontFamily: "'Roboto', sans-serif",
+                    color: "#374151",
+                  }}
+                >
+                  Email
+                </Label>
               </div>
-              <TextInput id="email" placeholder="Enter your email" required />
+              <TextInput
+                id="email"
+                placeholder="Enter your email"
+                required
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  backgroundColor: "white",
+                  color: "#374151",
+                }}
+              />
             </div>
 
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="password">Your password</Label>
+                <Label
+                  htmlFor="password"
+                  className="text-sm font-light"
+                  style={{
+                    fontFamily: "'Roboto', sans-serif",
+                    color: "#374151",
+                  }}
+                >
+                  Password
+                </Label>
               </div>
               <div className="relative">
                 <TextInput
@@ -66,6 +98,11 @@ export default function Login({
                       ? undefined
                       : "failure"
                   }
+                  style={{
+                    fontFamily: "'Roboto', sans-serif",
+                    backgroundColor: "white",
+                    color: "#374151",
+                  }}
                 />
                 <button
                   type="button"
@@ -81,7 +118,10 @@ export default function Login({
               </div>
 
               {!isPasswordValid && password.length > 0 && (
-                <p className="mt-1 text-sm text-red-600">
+                <p
+                  className="mt-1 text-sm text-red-600"
+                  style={{ fontFamily: "'Roboto', sans-serif" }}
+                >
                   Password must be at least 8 characters with letters, numbers,
                   and a special character.
                 </p>
@@ -91,27 +131,43 @@ export default function Login({
             <div className="flex justify-between">
               <div className="flex items-center gap-2">
                 <Checkbox id="remember" />
-                <Label htmlFor="remember">Remember me</Label>
+                <Label
+                  htmlFor="remember"
+                  className="text-sm font-light"
+                  style={{
+                    fontFamily: "'Roboto', sans-serif",
+                    color: "#374151",
+                  }}
+                >
+                  Remember me
+                </Label>
               </div>
               <a
                 href="#"
                 className="text-primary-700 dark:text-primary-500 text-sm hover:underline"
+                style={{ fontFamily: "'Roboto', sans-serif" }}
               >
                 Lost Password?
               </a>
             </div>
 
             <div className="w-full">
-              <Button disabled={!isPasswordValid}>
+              <Button
+                disabled={!isPasswordValid}
+                style={{ fontFamily: "'Roboto', sans-serif" }}
+              >
                 Log in to your account
               </Button>
             </div>
 
-            <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
-              Not registered?&nbsp;
+            <div className="flex justify-between text-sm font-medium text-gray-700 dark:text-gray-600">
+              <a href="" style={{ fontFamily: "'Roboto', sans-serif" }}>
+                Don’t have an account yet?&nbsp;
+              </a>
               <a
                 onClick={onSwitchToRegister}
                 className="text-primary-700 dark:text-primary-500 cursor-pointer hover:underline"
+                style={{ fontFamily: "'Roboto', sans-serif" }}
               >
                 Create account
               </a>

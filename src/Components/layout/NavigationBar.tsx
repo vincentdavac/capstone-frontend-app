@@ -13,7 +13,7 @@ import {
 import { useState } from "react";
 import Login from "../../Pages/Authentication/Login";
 import Register from "../../Pages/Authentication/Register";
-import COASTELLALogo from "/COASTELLA LOGO.svg"; // Import the logo
+import COASTELLALogo from "/logo 3.svg"; // Import the logo
 
 export default function NavigationBar() {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -34,7 +34,10 @@ export default function NavigationBar() {
               className="mr-3 h-8"
               alt="COASTELLA Logo"
             />
-            <span className="self-center text-xl font-bold whitespace-nowrap dark:text-[#FFFFFF]">
+            <span
+              className="self-center text-xl font-bold whitespace-nowrap dark:text-[#FFFFFF]"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
               COASTELLA
             </span>
           </NavbarBrand>

@@ -11,7 +11,7 @@ const rightImages = [
   "/pressure sensor.svg",
   "/gps.svg",
   "/anememtmoeajs.svg",
-  "/missing piece.svg",
+  "/kulang sa sensor.svg",
 ];
 
 export default function Prototype() {

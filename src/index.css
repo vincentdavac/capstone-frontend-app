@@ -1,12 +1,11 @@
 @import "tailwindcss";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&family=Playfair+Display:wght@400;700&display=swap");
+@import "@fontsource/montserrat";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Add in your global styles */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -15,26 +14,20 @@
   scrollbar-width: none; /* Firefox */
 }
 
-/* @font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto-Italic-VariableFont_wdth,wght") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto-VariableFont_wdth,wght") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-} */
-
 body {
   font-family: "Playfair Display", serif;
 }
 
 h2 {
   font-family: "Playfair Display", serif;
+}
+
+h3,
+p,
+a,
+button,
+label {
+  font-family: "Montserrat", sans-serif;
 }
 
 p {

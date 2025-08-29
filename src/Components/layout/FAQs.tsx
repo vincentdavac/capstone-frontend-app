@@ -40,40 +40,56 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
 export default function FAQs() {
   const faqs = [
     {
-      question: "What is COASTELLA and how does it work?",
+      question: "What exactly is COASTELLA?",
       answer:
-        "Hydroponics is a method of growing plants without soil, using mineral nutrient solutions in a water solvent. Plants are supported by an inert medium like perlite, rockwool, clay pellets, or coconut coir, and their roots are directly exposed to the nutrient solution.",
+        "COASTELLA stands for 'Coastal Observation and Alert System for Tracking Environment, Levels of water, Location, and Analytics.' It is a solar-powered, IoT-based buoy system equipped with sensors to monitor coastal conditions and detect signs of natural disasters. It provides real-time updates through a web and mobile platform, helping authorities deliver timely alerts.",
     },
     {
-      question: "What environmental data does the system monitor?",
+      question: "What types of natural disasters can COASTELLA detect?",
       answer:
-        "Not at all! Our systems are designed with beginners in mind. Each kit comes with detailed instructions, and our app provides step-by-step guidance. We also offer customer support to help you succeed.",
-    },
-    {
-      question: "Is COASTELLA powered only by solar energy?",
-      answer:
-        "It depends on the system. Our countertop herb gardens need only a square foot of space, while our vertical gardens typically require about 2-3 square feet of floor space. Commercial systems are customizable to your available space.",
-    },
-    {
-      question: "Who can use the data provided by COASTELLA?",
-      answer:
-        "Most of our home systems require only 5-10 minutes of maintenance per week. This includes checking water levels, adding nutrients, and occasionally checking pH levels if needed.",
-    },
-    {
-      question: "How does this system help in disaster preparedness?",
-      answer:
-        "You can grow a wide variety of plants hydroponically, including leafy greens, herbs, strawberries, tomatoes, peppers, and more. Different plants may require different systems, which we can help you select.",
-    },
-    {
-      question: "Can COASTELLA operate during bad weather or low sunlight?",
-      answer:
-        "Our systems are designed to be energy-efficient. A typical countertop system uses about as much electricity as a 60W light bulb. Larger systems use proportionally more, but are still very efficient compared to traditional growing methods when yield is considered.",
+        "COASTELLA has the capability to detect some of the severe threats such as tsunamis, tropical cyclones and storm surges. Its sensors monitor key parameters like rainfall, temperature, air and water pressure, wind speed, wave pattern and water levels. That is how we can be prepared before nature surprises us!",
     },
     {
       question:
-        "Is the system affordable and easy to maintain for local communities?",
+        "How does COASTELLA help during disasters like typhoons or storm surges?",
       answer:
-        "Yes, we offer professional installation services for our commercial systems and larger home systems. Installation services can be added during checkout.",
+        "In the event of a disaster, COASTELLA becomes very useful in providing disaster monitoring authorities including the City Disaster Risk Reduction and Management Department of Caloocan and Navotas with real time data of water levels, wave activity and other coastal conditions. By providing early and reliable information, they can issue timely alerts and mobilize responders quickly to provide assistance to the communities as early as possible.",
+    },
+    {
+      question: "How does COASTELLA send alerts and updates?",
+      answer:
+        "Data is being gathered via the sensors of the COASTELLA buoy and sent directly to the Firebase database. This data can then be accessed by authorized personnel through the web and mobile interface of the system in order to check the situation in real time and issue timely alerts and updates as needed.",
+    },
+    {
+      question: "Who can access the data collected by COASTELLA?",
+      answer:
+        "It is only authorized to the City Disaster Risk Reduction and Management Department of Caloocan and Navotas that have access to the data of COASTELLA. This is to make sure that information is managed securely and only applied to create timely alerts and coordinate rapid responses in case of an Emergency.",
+    },
+    {
+      question: "How is COASTELLA different from existing warning systems?",
+      answer:
+        "COASTELLA is characterized by the fact that it provides real-time and automatic surveillance with the help of its IoT-enabled network of buoys and sensors. As compared to the existing warning systems which may be based on manual detection or delayed information, COASTELLA updates in real time. It is solar-powered so it can operate continuously providing updates via web and mobile apps, which can respond more quickly.",
+    },
+    {
+      question: "What inspired you to create COASTELLA?",
+      answer:
+        "The inspiration behind the creation of COASTELLA stems from the critical need to validate data sourced from news outlets and other information channels regarding disaster preparedness in the Philippines. Our goal was to develop a system that provides real-time data and early alerts, helping authorities respond quickly and keep everyone safe.",
+    },
+    {
+      question: "Is there a mobile application for COASTELLA?",
+      answer:
+        "Yes! COASTELLA comes with an easy-to-use mobile application that allows authorized personnel to access real-time data and alerts on the go. This way, they can stay informed and ready to respond, no matter where they are.",
+    },
+    {
+      question: "What happens if the solar power is insufficient?",
+      answer:
+        "COASTELLA has a 12V 28Ah lead-acid battery with a safe 80 percent usable capacity to store excess solar energy. This enables the system to maintain approximately 33 hours of operation in case of limited sunlight.",
+    },
+    {
+      question:
+        "Does Coastella require constant internet connection to function?",
+      answer:
+        "No. The buoy sends data to a receiver by means of radio frequency (10-15 km range) without the internet. The system side only requires internet connectivity to send data to a Firebase database that authorized employees can then monitor and have access to real-time data and notifications.",
     },
   ];
 
@@ -82,7 +98,7 @@ export default function FAQs() {
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2
-            className="mb-4 text-3xl font-light text-[#023E8A] md:text-6xl"
+            className="mb-10 text-3xl font-light text-[#023E8A] md:text-6xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             FREQUENTLY ASKED QUESTIONS

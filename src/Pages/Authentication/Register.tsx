@@ -56,30 +56,58 @@ export default function Register({
 
   return (
     <Modal show={show} size="md" onClose={onClose} popup>
-      <ModalHeader />
-      <ModalBody>
+      <ModalHeader className="bg-[#FFFFFF]" />
+      <ModalBody className="bg-[#FFFFFF]">
         <div className="space-y-6">
-          <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-            Register in to our platform
+          <h3
+            className="text-xl font-bold text-[#0353A4]"
+            style={{
+              fontFamily: "'Roboto', sans-serif",
+            }}
+          >
+            Create your Account
           </h3>
 
           <div>
-            <Label htmlFor="name" className="mb-2 block">
-              Your Name
-            </Label>
+            <div className="mb-2 block">
+              <Label
+                htmlFor="name"
+                className="text-sm font-light"
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  color: "#374151",
+                }}
+              >
+                Your Name
+              </Label>
+            </div>
             <TextInput
               id="name"
               placeholder="Enter your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                backgroundColor: "white",
+                color: "#374151",
+              }}
             />
           </div>
 
           <div>
-            <Label htmlFor="email" className="mb-2 block">
-              Your Email
-            </Label>
+            <div className="mb-2 block">
+              <Label
+                htmlFor="email"
+                className="text-sm font-light"
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  color: "#374151",
+                }}
+              >
+                Your Email
+              </Label>
+            </div>
             <TextInput
               id="email"
               placeholder="Enter your email"
@@ -87,16 +115,35 @@ export default function Register({
               onChange={(e) => setEmail(e.target.value)}
               required
               color={email && !isEmailValid ? "failure" : undefined}
+              style={{
+                fontFamily: "'Roboto', sans-serif",
+                backgroundColor: "white",
+                color: "#374151",
+              }}
             />
             {email && !isEmailValid && (
-              <p className="mt-1 text-sm text-red-500">Invalid email format</p>
+              <p
+                className="mt-1 text-sm text-red-600"
+                style={{ fontFamily: "'Roboto', sans-serif" }}
+              >
+                Invalid email format
+              </p>
             )}
           </div>
 
           <div>
-            <Label htmlFor="password" className="mb-2 block">
-              Your Password
-            </Label>
+            <div className="mb-2 block">
+              <Label
+                htmlFor="password"
+                className="text-sm font-light"
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  color: "#374151",
+                }}
+              >
+                Your Password
+              </Label>
+            </div>
             <div className="relative">
               <TextInput
                 id="password"
@@ -106,11 +153,16 @@ export default function Register({
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 color={password && !isPasswordValid ? "failure" : undefined}
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  backgroundColor: "white",
+                  color: "#374151",
+                }}
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute top-2.5 right-3 text-sm text-gray-500"
+                className="absolute inset-y-0 right-3 flex items-center text-gray-500"
               >
                 {showPassword ? (
                   <EyeSlashIcon className="h-5 w-5" />
@@ -120,16 +172,28 @@ export default function Register({
               </button>
             </div>
             {password && !isPasswordValid && (
-              <p className="mt-1 text-sm text-red-500">
+              <p
+                className="mt-1 text-sm text-red-600"
+                style={{ fontFamily: "'Roboto', sans-serif" }}
+              >
                 Minimum 8 characters, 1 letter, 1 number, 1 special character
               </p>
             )}
           </div>
 
           <div>
-            <Label htmlFor="password_confirmation" className="mb-2 block">
-              Confirm Your Password
-            </Label>
+            <div className="mb-2 block">
+              <Label
+                htmlFor="password_confirmation"
+                className="text-sm font-light"
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  color: "#374151",
+                }}
+              >
+                Confirm Your Password
+              </Label>
+            </div>
             <div className="relative">
               <TextInput
                 id="password_confirmation"
@@ -141,11 +205,16 @@ export default function Register({
                 color={
                   confirmPassword && !isPasswordMatched ? "failure" : undefined
                 }
+                style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  backgroundColor: "white",
+                  color: "#374151",
+                }}
               />
               <button
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="absolute top-2.5 right-3 text-sm text-gray-500"
+                className="absolute inset-y-0 right-3 flex items-center text-gray-500"
               >
                 {showConfirmPassword ? (
                   <EyeSlashIcon className="h-5 w-5" />
@@ -155,7 +224,10 @@ export default function Register({
               </button>
             </div>
             {confirmPassword && !isPasswordMatched && (
-              <p className="mt-1 text-sm text-red-500">
+              <p
+                className="mt-1 text-sm text-red-600"
+                style={{ fontFamily: "'Roboto', sans-serif" }}
+              >
                 Passwords do not match
               </p>
             )}
@@ -164,22 +236,24 @@ export default function Register({
           <div className="w-full">
             <Button
               onClick={handleRegister}
-              className="w-full"
               disabled={!isFormValid}
+              style={{ fontFamily: "'Roboto', sans-serif" }}
             >
-              Register
+              Create your account
             </Button>
           </div>
 
-          <div className="text-center text-sm font-medium text-gray-500 dark:text-gray-300">
-            Already have an account?{" "}
-            <button
-              type="button"
+          <div className="flex justify-between text-sm font-medium text-gray-700 dark:text-gray-600">
+            <a href="" style={{ fontFamily: "'Roboto', sans-serif" }}>
+              Already have an account?&nbsp;
+            </a>
+            <a
               onClick={onSwitchToLogin}
-              className="text-blue-700 hover:underline dark:text-blue-500"
+              className="text-primary-700 dark:text-primary-500 cursor-pointer hover:underline"
+              style={{ fontFamily: "'Roboto', sans-serif" }}
             >
-              Login here
-            </button>
+              Sign in here
+            </a>
           </div>
         </div>
       </ModalBody>

@@ -1,4 +1,4 @@
-import { LinkedinIcon, TwitterIcon } from "lucide-react";
+import { Linkedin, Twitter } from "lucide-react";
 
 export default function Team() {
   const teamMembers = [
@@ -75,6 +75,7 @@ export default function Team() {
       twitter: "#",
     },
   ];
+
   return (
     <section className="w-full bg-[#0353A4] py-16">
       <div className="container mx-auto px-4">
@@ -85,16 +86,21 @@ export default function Team() {
           >
             MEET OUR TEAM
           </h2>
-          <p className="max-w-10xl mx-auto pt-2 text-2xl font-light text-[#FFFFFF]">
+          <p className="mx-auto max-w-4xl pt-2 text-lg font-light text-[#FFFFFF] md:text-2xl">
             The dedicated team of innovators behind COASTELLA, working together
             to create safer and smarter coastal communities.
           </p>
         </div>
-        <div className="no-scrollbar flex gap-4 overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4">
+
+        {/* Horizontal Scroll Wrapper - Fixed responsive widths */}
+        <div
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-2 pb-4"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="min-w-[280px] shrink-0 transform overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:min-w-0"
+              className="w-full flex-shrink-0 snap-start overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] xl:w-[calc(25%-0.75rem)]"
             >
               <div className="aspect-[3/4] w-full overflow-hidden">
                 <img
@@ -104,25 +110,26 @@ export default function Team() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="mb-2 text-xl leading-tight font-semibold text-gray-800">
                   {member.name}
                 </h3>
-                <p className="mb-3 text-sm text-gray-600">{member.role}</p>
-                {/* <p className="mb-4 text-gray-700">{member.bio}</p> */}
+                <p className="mb-4 text-sm font-medium text-gray-600">
+                  {member.role}
+                </p>
                 <div className="flex space-x-3">
                   <a
                     href={member.linkedin}
-                    className="text-[#0353A4] hover:text-[#39A7FF]/80"
+                    className="text-[#0353A4] transition-colors duration-200 hover:text-[#39A7FF]"
                     aria-label={`${member.name}'s LinkedIn profile`}
                   >
-                    <LinkedinIcon size={20} />
+                    <Linkedin size={20} />
                   </a>
                   <a
                     href={member.twitter}
-                    className="text-[#0353A4] hover:text-[#39A7FF]/80"
+                    className="text-[#0353A4] transition-colors duration-200 hover:text-[#39A7FF]"
                     aria-label={`${member.name}'s Twitter profile`}
                   >
-                    <TwitterIcon size={20} />
+                    <Twitter size={20} />
                   </a>
                 </div>
               </div>
