@@ -2,7 +2,15 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="w-full bg-[#0353A4] py-16">
+    <section
+      className="w-full bg-[#0353A4] py-16"
+      style={{
+        backgroundImage: `url('/wave.svg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2

@@ -35,7 +35,12 @@ export default function ModelViewer() {
   return (
     <Canvas
       camera={{ fov: 45, near: 0.1, far: 1000 }}
-      style={{ background: "transparent", width: "100%", height: "100%" }}
+      style={{
+        background: "transparent",
+        width: "110%",
+        height: "107%",
+        borderRadius: "8px",
+      }}
       gl={{ antialias: true, alpha: true }}
     >
       <ambientLight intensity={0.8} />
